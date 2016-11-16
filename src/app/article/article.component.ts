@@ -10,7 +10,7 @@ export class ArticleComponent{
   @Input() article: Article;
   @Output() removeArticle = new EventEmitter();
 
-  removeArticle1(): void {
+  removeSelectedArticle(): void {
     console.log("inside ArticleComponent class");
     this.removeArticle.next(this.article);
   }

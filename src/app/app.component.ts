@@ -22,10 +22,10 @@ export class AppComponent {
         'description of wicked ideas')
     ]
   }
-  addArticle(): void {
+/*  addArticle(): void {
     this.articles.push(new Article('newly added article', 'hey look at this new article'));
-  }
-  addArticle2(title: string, description: string): void {
+  }*/
+  addArticle(title: string, description: string): void {
     this.articles.push(new Article(title, description));
   }
   removeLastArticle(): void {
@@ -41,9 +41,5 @@ export class AppComponent {
   /**
    * name
    */
-  removeSelected(article) {
-    console.log("remove:" + article);
-    const index = this.articles.indexOf(article);
-    this.articles.splice(index, 1);
-  }
+
 }

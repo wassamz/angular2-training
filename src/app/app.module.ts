@@ -8,6 +8,7 @@ import {
 } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ArticleComponent } from './article/article.component';
+import { ArticleListComponent } from './article-list/article-list.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ArticleComponent } from './article/article.component';
     SidebarComponent,
     ArticleComponent,
     SidebarComponent,
-    ArticleComponent
+    ArticleComponent,
+    ArticleListComponent
   ],
   imports: [
     BrowserModule,
