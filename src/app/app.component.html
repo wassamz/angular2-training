@@ -1,3 +1,23 @@
-<h1>
-  {{title}}
-</h1>
+<div class="ui container">
+  <button class="ui button" (click)="toggleSidebar()">Sidebar</button>
+  
+    <app-sidebar></app-sidebar>
+    <div class="ui divided items">
+        <app-article 
+          *ngFor="let article of articles"
+          [article]="article"
+          class='item'
+          (removeArticle)="removeSelected($event)"
+          >
+        </app-article>
+        <button class="ui button" (click)="addArticle()">Add Article</button>
+        <button class="ui button" (click)="removeLastArticle()">Remove Article</button>
+    </div>
+    <div class="ui input">
+      <input type="text" [(ngModel)]="title" placeholder="Enter a title here">
+    </div>
+    <div class="ui input">
+      <input type="text" [(ngModel)]="description" placeholder="Enter a description here">
+    </div>
+    <button class="ui button" (click)="addArticle2(title,description)">Add Article2</button>
+    

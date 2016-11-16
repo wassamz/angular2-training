@@ -1,0 +1,33 @@
+    <div class="image">
+      <img src="https://cdn0.vox-cdn.com/thumbor/fK475h9071HQm0XEligoW7VGkX0=/800x0/filters:no_upscale()/cdn0.vox-cdn.com/uploads/chorus_asset/file/7337601/womens-shocking-beauty-costume.jpg"/>
+    </div>
+    <div class="content">
+        <div class="header">{{article.title}}</div>
+        <div class="meta">
+          <span class="ui blue small label">
+            <i class="heart icon"></i>
+            <div class="detail">
+              {{article.votes}}
+              </div>
+          </span>
+        <span class="ui right floated">
+          <a 
+            (click)="upvote()"
+            class="ui small label">
+            <i class ="arrow up icon"></i>
+            Upvote
+          </a>
+            <a 
+            (click)="downvote()"
+            class="ui small label">
+            <i class ="arrow down icon"></i>
+            Downvote
+          </a>
+          </span>
+        </div>
+        <div class="meta date">{{article.publishedAt | date:'medium'}}</div>
+        <div class="meta description">{{article.description}}
+        </div>
+        <div class="extra"><a href="#" class='ui right floated button primary'>Read More <i class='right chevron icon'></i></a></div>
+        <button class="ui button" (click)="removeArticle1()">Remove Article</button>
+    </div>
